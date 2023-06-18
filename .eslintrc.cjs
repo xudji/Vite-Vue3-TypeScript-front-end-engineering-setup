@@ -6,16 +6,16 @@ module.exports = {
   extends: [
     'standard',
     'plugin:vue/vue3-essential',
-    'plugin:prettier/recommended' // 添加 prettier 插件
+    'plugin:prettier/recommended',
+    'plugin:jest/recommended'
+    // 添加 prettier 插件
   ],
   overrides: [
     {
       env: {
         node: true
       },
-      files: [
-        '.eslintrc.{js,cjs}'
-      ],
+      files: ['.eslintrc.{js,cjs}'],
       parserOptions: {
         sourceType: 'script'
       }
@@ -25,9 +25,6 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
-  plugins: [
-    'vue'
-  ],
-  rules: {
-  }
+  plugins: ['vue'],
+  rules: {}
 }
